@@ -22,7 +22,6 @@ public class ZoomControl : MonoBehaviour
         {
             cam.fieldOfView -= scroll * zoomSpeed;
             cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, minZoom, maxZoom);
-        }
 
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -30,6 +29,7 @@ public class ZoomControl : MonoBehaviour
             {
                cam.transform.LookAt(hit.transform.position);
             }
+        }
         }
     }
     

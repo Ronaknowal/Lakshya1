@@ -98,6 +98,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bbf9cd9432e366a4c955f1c2d0655bfa, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6e6cbe75171a474469e5222b3867be01, type: 2}
     - target: {fileID: 919132149155446097, guid: bbf9cd9432e366a4c955f1c2d0655bfa, type: 3}
       propertyPath: m_Name
       value: Hexagon
@@ -109,3 +113,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bbf9cd9432e366a4c955f1c2d0655bfa, type: 3}
   m_PrefabInstance: {fileID: 3847870554008876866}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4154298184286292499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bbf9cd9432e366a4c955f1c2d0655bfa, type: 3}
+  m_PrefabInstance: {fileID: 3847870554008876866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3868954390191012254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4154298184286292499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5523e658dadaa6b428dc788c19376e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  hoverColor: {r: 0, g: 0, b: 1, a: 1}
+  clickedColor: {r: 1, g: 0, b: 0, a: 1}
+  isClicked: 0
+--- !u!64 &3320682395125590332
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4154298184286292499}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: bbf9cd9432e366a4c955f1c2d0655bfa, type: 3}

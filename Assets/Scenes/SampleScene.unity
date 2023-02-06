@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194230}
-  - component: {fileID: 963194229}
+  - component: {fileID: 963194231}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -303,25 +303,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 008f36f645e6b8d459a4320e6a616403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoomSpeed: 4
-  minZoom: 10
-  maxZoom: 40
-  target: {fileID: 0}
-  planeLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,6 +318,25 @@ MonoBehaviour:
   dragStart: {x: 0, y: 0, z: 0}
   wasDown: 0
   cameraOffset: {x: 10, y: 10, z: 10}
+--- !u!114 &963194231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 008f36f645e6b8d459a4320e6a616403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomSpeed: 10
+  minZoom: 20
+  maxZoom: 50
+  target: {fileID: 963194228}
+  planeLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1448996491
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +392,10 @@ PrefabInstance:
     - target: {fileID: 1469474616371941173, guid: ad368efc4a0078b44bb6b1b091167c59, type: 3}
       propertyPath: m_Name
       value: Hex
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497233074580941766, guid: ad368efc4a0078b44bb6b1b091167c59, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4981711075136254037, guid: ad368efc4a0078b44bb6b1b091167c59, type: 3}
       propertyPath: m_RootOrder
