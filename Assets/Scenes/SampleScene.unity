@@ -393,10 +393,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hex
       objectReference: {fileID: 0}
-    - target: {fileID: 2497233074580941766, guid: ad368efc4a0078b44bb6b1b091167c59, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4981711075136254037, guid: ad368efc4a0078b44bb6b1b091167c59, type: 3}
       propertyPath: m_RootOrder
       value: 2

@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class MouseFn : MonoBehaviour
 {
-    [SerializeField] Color originalColor = Color.white;
-    [SerializeField] Color hoverColor = Color.blue;
-    [SerializeField] Color clickedColor = Color.red;
-    
+    public Material materialOriginal;
+    public Material materialHover;
+    public Material materialClick;
+
 
     [SerializeField] bool isClicked = false;
 
@@ -23,7 +23,7 @@ public class MouseFn : MonoBehaviour
     //Changes originalColor to hoverColor when hovered over
     private void OnMouseEnter()
     {
-        renderer.material.color = hoverColor;
+        renderer.material = materialHover;
     }
 
     //Changes originalColor to clickedColor or hoveredColor when hovered out
@@ -31,12 +31,12 @@ public class MouseFn : MonoBehaviour
     {
         if (isClicked)
         {
-            renderer.material.color = clickedColor;
+            renderer.material = materialClick;
 
         }
         else
         {
-            renderer.material.color = originalColor;
+            renderer.material = materialOriginal;
             
         }
     }
@@ -48,11 +48,11 @@ public class MouseFn : MonoBehaviour
        
             foreach (var button in FindObjectsOfType<MouseFn>())
             {
-                button.renderer.material.color = originalColor;
+                button.renderer.material = materialOriginal;
                 button.isClicked = false;
             }
 
-            this.renderer.material.color = clickedColor;
+            this.renderer.material = materialClick;
             this.isClicked = true;
         
 
