@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class MouseFn : MonoBehaviour
 {
@@ -11,14 +13,33 @@ public class MouseFn : MonoBehaviour
 
 
     [SerializeField] bool isClicked = false;
+    [SerializeField] int resourceAmount = 1;
+    [SerializeField] ResourceType resourceSlot;
+    [SerializeField] TextMeshProUGUI resourceText;
 
     MeshRenderer renderer;
     Resource resources;
+   
 
     private void Start()
     {
         renderer = GetComponent<MeshRenderer>();
+        resourceText = FindObjectOfType<TextMeshProUGUI>();
+        resourceText.text = "Resource: " + FindObjectOfType<Resource>().GetCurrentResource(resourceSlot).ToString();
+
+
     }
+
+    private void Update()
+    {
+        resourceText.text = "Resource: " + FindObjectOfType<Resource>().GetCurrentResource(resourceSlot).ToString();
+
+    }
+
+    //private void DisplayResources()
+    //{
+    //    resourceText.text = "Resource: "+ FindObjectOfType<Resource>().GetCurrentResource(resourceSlot).ToString();
+    //}
 
     //Changes originalColor to hoverColor when hovered over
     private void OnMouseEnter()
@@ -51,6 +72,11 @@ public class MouseFn : MonoBehaviour
                 button.renderer.material = materialOriginal;
                 button.isClicked = false;
             }
+
+
+            FindObjectOfType<Resource>().IncreaseCurrentResource(resourceSlot,resourceAmount);
+            var resource = FindObjectOfType<Resource>().GetCurrentResource(resourceSlot);
+            Debug.Log(resource);
 
             this.renderer.material = materialClick;
             this.isClicked = true;
